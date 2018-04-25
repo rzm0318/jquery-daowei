@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./jquery-1.8.3.min.js"></script>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    .container{
+      display: flex;
+      justify-content: space-around;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+    }
+
+  </style>
+</head>
+<body>
+<body>
+
+<div class="container">
+
+
+
+
+</div>
+<div id="pages"></div>
+
+</body>
+<script type="text/javascript" src="./template-web.js"></script>
+<script id="temp4" type="text/html">
+  {{each comment}}
+  <div class="box" name="box">
+    <ul>
+      <li class="username">{{$value.nick}}</li>
+      <li class="star">
+            <span >
+              <img src="./images/red_star.png">
+              <img src="./images/red_star.png">
+              <img src="./images/red_star.png">
+              <img src="./images/red_star.png">
+              <img src="./images/red_star.png">
+            </span>
+        <span><em>2018-03-15</em></span>
+      </li>
+      <li class="say">{{$value.comment}}</li>
+      <li class="position">
+        <img src="./images/position.jpg">
+        <span>{{$value.city}}</span>
+        <span>{{$value.area}}</span>
+      </li>
+    </ul>
+  </div>
+  {{/each}}
+</script>
+
+<script>
+//  $.get('http://localhost:3000/comment',function (data) {
+//    $('.container').append(template('temp4',data));
+//  })
+  $.get('http://localhost:3000/comment',function (data) {
+    for(var i=0; i< data.comment.length/10;i++){
+      $(".container").append( '<div class="box" name="box">+data.comment[i]+</div>')
+    }
+  })
+
+  var $pages = $("#pages");
+  var pgindex = 1;//当前页
+  var eachCnt = 5;//每页显示个数
+  var boxes = $("div[name='box']");
+  console.log(boxes.length);
+  var cnt = boxes.length;
+  var indexs = new Array(cnt);
+  for(var i=0; i<cnt; i++) {
+    indexs[i] = i;
+  }
+  var allPages = Math.ceil(cnt/eachCnt);
+  $(function() {
+    $pages.html("total " + allPages + " pages");
+    showPage(1);
+    for(var i=0; i<allPages; i++) {
+      $pages.append("<a href=\"javascript:showPage('"+ (i+1) +"');\"> "+ (i+1) +" </a>");
+    }
+    $pages.append("<a href=\"javascript:gotopage(-1);\">prev</a> <a href=\"javascript:gotopage(1);\">next</a>");
+
+  });
+
+  function gotopage(value){
+    try{
+      value=="-1"?showPage(pgindex-1):showPage(pgindex+1);
+    }catch(e){
+
+    }
+  }
+  function showPage(pageIndex)
+  {
+    if(pageIndex== 0 || pageIndex==(allPages+1)) {
+      return;
+    }
+    var start = (pageIndex-1)*8;//8
+    var end = start + 8;
+    end = end > cnt ? cnt : end;//16
+    var subIndexs = indexs.slice(start, end);
+    for(var i=0; i<cnt; i++) {
+      if(contains(i, subIndexs)) {
+        boxes.eq(i).show();
+      }else{
+        boxes.eq(i).hide();
+      }
+    }
+    pgindex = pageIndex;
+  }
+
+  var contains = function (element, arr) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] == element) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+</script>
+</body>
+</html>

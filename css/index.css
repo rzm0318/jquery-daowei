@@ -1,0 +1,434 @@
+body,
+html {
+  background: #fff;
+}
+.wrap {
+  position: relative;
+}
+.wrap .header {
+  background: rgba(255, 252, 255, 0.95);
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 200;
+  border-bottom: 1.5px solid rgba(191, 191, 191, 0.8);
+  display: flex;
+  width: 100%;
+  height: 73px;
+  line-height: 73px;
+}
+.wrap .header img {
+  padding-top: 13px;
+  margin-left: 40px;
+}
+.wrap .header .address {
+  position: absolute;
+  left: 360px;
+}
+.wrap .header .address img {
+  vertical-align: middle;
+  margin-top: -17px;
+}
+.wrap .header .address span {
+  font-weight: bold;
+}
+.wrap .header .headerNav {
+  position: absolute;
+  right: 130px;
+}
+.wrap .header .headerNav :first-child {
+  color: #e94840;
+}
+.wrap .header .headerNav a {
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+}
+.wrap .header .last-a {
+  background: #e94840;
+  width: 76px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  right: 18px;
+  top: 25px;
+  font-weight: bold;
+}
+.wrap .nav {
+  position: relative;
+  overflow: hidden;
+  margin-left: -320px;
+  margin-top: 72px;
+}
+.wrap .nav .swiper-container {
+  width: 100%;
+  height: 420px;
+}
+/*.wrap .nav .swiper-container .tabwrap .wrap_left {
+  width: 180px;
+  height: 420px;
+  background: #757881;
+  padding-top: 22px;
+}
+.wrap .nav .swiper-container .tabwrap .wrap_left li {
+  height: 42px;
+  position: relative;
+  left: 37px;
+}
+.wrap .nav .swiper-container .tabwrap .wrap_left li p {
+  color: white;
+  font-weight: bold ;
+}
+.wrap .nav .swiper-container .tabwrap .wrap_left li img {
+  position: absolute;
+  right: 80px;
+  top: 5px;
+  width: 6px;
+  height: 10px;
+}
+.wrap .nav .swiper-container .tabwrap .wrap_left li div {
+  width: 160px;
+  height: 420px;
+  background: white;
+  position: absolute;
+  left: 144px;
+  top: -15px;
+}
+.wrap .nav .swiper-container .tabwrap .wrap_left li div span {
+  height: 42px;
+  line-height: 42px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+.wrap .nav .swiper-container .tabwrap .wrap_right {
+  width: 160px;
+  height: 420px;
+  background: white;
+  position: absolute;
+  left: 175px;
+}
+.wrap .nav .swiper-container .tabwrap .wrap_right li {
+  height: 42px;
+  line-height: 42px;
+}
+.wrap .nav .swiper-container .tabwrap .wrap_right span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}*/
+.wrap .nav .swiper-container .menu-nav {
+  width: 180px;
+  height: 420px;
+  background: #757881;
+  position: absolute;
+  left: 24%;
+  top: 0;
+  z-index: 100;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list {
+  width: 100%;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list .nav-item {
+  width: 100%;
+  height: 42px;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list .nav-item .item-pos {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 42px;
+  box-sizing: border-box;
+  position: relative;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list .nav-item .item-pos a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list .nav-item img {
+  width: 6px;
+  height: 11px;
+  position: absolute;
+  right: 35px;
+  top: 18px;
+  display: block;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list .nav-item .nextMenu {
+  width: 160px;
+  height: 420px;
+  background: #fff;
+  position: absolute;
+  left: 180px;
+  top: 0;
+  display: none;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list .nav-item .nextMenu .nextMenu-item {
+  width: 100%;
+  height: 42px;
+  box-sizing: border-box;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list .nav-item .nextMenu .nextMenu-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 42px;
+  font-weight: bold;
+  color: #121212;
+  text-align: left;
+  padding-left: 45px;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list .nav-item:hover {
+  background: #60646d;
+}
+.wrap .nav .swiper-container .menu-nav .nav-list .nav-item:hover .nextMenu {
+  width: 160px;
+  height: 420px;
+  background: #fff;
+  position: absolute;
+  left: 180px;
+  top: 0;
+  display: block;
+}
+.wrap .content-wrap {
+  width: 100%;
+  margin: 0  auto;
+}
+.wrap .content-wrap .content {
+  background: #FBF8F8;
+}
+.wrap .content-wrap .content .bigTitle {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+.wrap .content-wrap .content .specific-title {
+  font-family: "幼圆";
+  font-size: 22px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.wrap .content-wrap .content .specific-title span a {
+  position: absolute;
+  right: 24px;
+  font-size: 18px;
+}
+.wrap .content-wrap .content .specific-content1,
+.wrap .content-wrap .content .specific-content2,
+.wrap .content-wrap .content .specific-content3,
+.wrap .content-wrap .content .specific-content4,
+.wrap .content-wrap .content .specific-content5,
+.wrap .content-wrap .content .specific-content6,
+.wrap .content-wrap .content .specific-content7,
+.wrap .content-wrap .content .specific-content8 {
+  display: flex;
+  height: 345px;
+  margin-left: 40px;
+}
+.wrap .content-wrap .content .specific-content1 .single,
+.wrap .content-wrap .content .specific-content2 .single,
+.wrap .content-wrap .content .specific-content3 .single,
+.wrap .content-wrap .content .specific-content4 .single,
+.wrap .content-wrap .content .specific-content5 .single,
+.wrap .content-wrap .content .specific-content6 .single,
+.wrap .content-wrap .content .specific-content7 .single,
+.wrap .content-wrap .content .specific-content8 .single {
+  width: 230px;
+  border: 1px solid red;
+  margin-right: 8px;
+  position: relative;
+}
+.wrap .content-wrap .content .specific-content1 .single img,
+.wrap .content-wrap .content .specific-content2 .single img,
+.wrap .content-wrap .content .specific-content3 .single img,
+.wrap .content-wrap .content .specific-content4 .single img,
+.wrap .content-wrap .content .specific-content5 .single img,
+.wrap .content-wrap .content .specific-content6 .single img,
+.wrap .content-wrap .content .specific-content7 .single img,
+.wrap .content-wrap .content .specific-content8 .single img {
+  display: block;
+  width: 210px;
+  height: 210px;
+  margin: 10px;
+}
+.wrap .content-wrap .content .specific-content1 .single .title,
+.wrap .content-wrap .content .specific-content2 .single .title,
+.wrap .content-wrap .content .specific-content3 .single .title,
+.wrap .content-wrap .content .specific-content4 .single .title,
+.wrap .content-wrap .content .specific-content5 .single .title,
+.wrap .content-wrap .content .specific-content6 .single .title,
+.wrap .content-wrap .content .specific-content7 .single .title,
+.wrap .content-wrap .content .specific-content8 .single .title {
+  font-weight: bold;
+  margin: 0 0 10px 10px;
+}
+.wrap .content-wrap .content .specific-content1 .single .specific,
+.wrap .content-wrap .content .specific-content2 .single .specific,
+.wrap .content-wrap .content .specific-content3 .single .specific,
+.wrap .content-wrap .content .specific-content4 .single .specific,
+.wrap .content-wrap .content .specific-content5 .single .specific,
+.wrap .content-wrap .content .specific-content6 .single .specific,
+.wrap .content-wrap .content .specific-content7 .single .specific,
+.wrap .content-wrap .content .specific-content8 .single .specific {
+  /*  -webkit-line-clamp用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的WebKit属性。常见结合属性：
+                 display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。
+                -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。
+                -webkit-line-clamp: num;   块元素显示的文本的行数。
+             */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 13px;
+  height: 38px;
+  line-height: 18px;
+  color: #929292;
+  margin-left: 10px;
+}
+.wrap .content-wrap .content .specific-content1 .single .foot,
+.wrap .content-wrap .content .specific-content2 .single .foot,
+.wrap .content-wrap .content .specific-content3 .single .foot,
+.wrap .content-wrap .content .specific-content4 .single .foot,
+.wrap .content-wrap .content .specific-content5 .single .foot,
+.wrap .content-wrap .content .specific-content6 .single .foot,
+.wrap .content-wrap .content .specific-content7 .single .foot,
+.wrap .content-wrap .content .specific-content8 .single .foot {
+  padding: 15px;
+  position: absolute;
+  bottom: -4px;
+}
+.wrap .content-wrap .content .specific-content1 .single .foot p,
+.wrap .content-wrap .content .specific-content2 .single .foot p,
+.wrap .content-wrap .content .specific-content3 .single .foot p,
+.wrap .content-wrap .content .specific-content4 .single .foot p,
+.wrap .content-wrap .content .specific-content5 .single .foot p,
+.wrap .content-wrap .content .specific-content6 .single .foot p,
+.wrap .content-wrap .content .specific-content7 .single .foot p,
+.wrap .content-wrap .content .specific-content8 .single .foot p {
+  color: #fb474f;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+}
+.wrap .content-wrap .content .specific-content1 .single .foot p .time,
+.wrap .content-wrap .content .specific-content2 .single .foot p .time,
+.wrap .content-wrap .content .specific-content3 .single .foot p .time,
+.wrap .content-wrap .content .specific-content4 .single .foot p .time,
+.wrap .content-wrap .content .specific-content5 .single .foot p .time,
+.wrap .content-wrap .content .specific-content6 .single .foot p .time,
+.wrap .content-wrap .content .specific-content7 .single .foot p .time,
+.wrap .content-wrap .content .specific-content8 .single .foot p .time {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 3px;
+}
+.wrap .content-wrap .content .specific-content1 .single .foot p .details,
+.wrap .content-wrap .content .specific-content2 .single .foot p .details,
+.wrap .content-wrap .content .specific-content3 .single .foot p .details,
+.wrap .content-wrap .content .specific-content4 .single .foot p .details,
+.wrap .content-wrap .content .specific-content5 .single .foot p .details,
+.wrap .content-wrap .content .specific-content6 .single .foot p .details,
+.wrap .content-wrap .content .specific-content7 .single .foot p .details,
+.wrap .content-wrap .content .specific-content8 .single .foot p .details {
+  /*display: block;*/
+  text-align: center;
+  font-size: 14px;
+  background: #fb474f;
+  width: 76px;
+  height: 24px;
+  line-height: 24px;
+  margin-right: 5px;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  left: 135px;
+}
+.wrap .content-wrap .service {
+  text-align: center;
+  padding-top: 60px;
+  height: 200px;
+}
+.wrap .content-wrap .service h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 14px;
+  color: #3d3838;
+}
+.wrap .content-wrap .service h2 span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fb474f;
+}
+.wrap .content-wrap .service p {
+  font-size: 23px;
+  margin-bottom: 20px;
+  color: #3d3838;
+}
+.wrap .content-wrap .service .foot span {
+  margin-right: 26px;
+  font-size: 18px;
+}
+.wrap .content-wrap .service .foot span img {
+  vertical-align: middle;
+  margin: 5px;
+}
+.wrap .content-wrap .cities {
+  height: 120px;
+  position: relative;
+}
+.wrap .content-wrap .cities p {
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+}
+.wrap .content-wrap .cities .city {
+  width: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  right: 60px;
+}
+.wrap .content-wrap .cities .city a {
+  text-align: center;
+  width: 90px;
+  height: 30px;
+  font-size: 16px;
+  color: #898989;
+}
+.wrap .content-wrap .footer {
+  background: #FBF8F8;
+}
+.wrap .content-wrap .footer p {
+  color: #898989;
+  font-size: 14px;
+  margin-bottom: 38px;
+}
+.wrap .content-wrap .footer h1 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.wrap .content-wrap .footer ul {
+  display: flex;
+  flex-flow: wrap;
+  width: 1200px;
+}
+.wrap .content-wrap .footer a {
+  width: 10%;
+  background: #fff;
+  height: 60px;
+  margin-left: 13px;
+  margin-bottom: 18px;
+}
+.wrap .content-wrap .footer img {
+  width: 100px;
+}

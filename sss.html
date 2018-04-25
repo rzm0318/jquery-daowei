@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  *{
+    padding: 0px;
+    margin: 0px;
+  }
+  *{ margin:0; padding:0; list-style:none;}
+  a{ text-decoration:none;}
+  a:hover{ text-decoration:none;}
+  .tcdPageCode{padding: 15px 20px;text-align: left;color: #ccc;}
+  .tcdPageCode a{display: inline-block;color: #428bca;display: inline-block;height: 25px;
+    line-height: 25px;    padding: 0 10px;border: 1px solid #ddd;    margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+  .tcdPageCode a:hover{text-decoration: none;border: 1px solid #428bca;}
+  .tcdPageCode span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;
+    margin: 0 2px;color: #fff;background-color: #428bca;    border: 1px solid #428bca;border-radius: 4px;vertical-align: middle;}
+  .tcdPageCode span.disabled{    display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;
+    margin: 0 2px;    color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
+  ul{
+    list-style: none;
+  }
+  .wrap >ul > li{
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+    /*border: 1px green solid;*/
+    float: left;
+    margin-bottom: 40px;
+  }
+  .wrap >ul > li>img{
+    width: 100%;
+    height: 100%;
+  }
+  .wrap >ul > li>p{
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+  }
+  .wrap{
+    margin: 100px auto;
+    border: 1px solid red;
+    height: 1800px;
+    width: 1460px;
+  }
+</style>
+<body>
+<div class = 'wrap'>
+  <ul class='movieList'>
+    <!--<li>-->
+    <!--<img src="" alt="">-->
+    <!--<p>电影名：惊天魔盗团</p>-->
+    <!--</li>-->
+  </ul>
+  <!-- 代码部分begin -->
+  <div class="tcdPageCode">
+  </div>
+</div>
+</body>
+</html>
+
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.page.js"></script>
+
+<script>
+  $(function () {
+    //初始化第一页数据；
+    var urlApi = 'http://api.douban.com/v2/movie/top250'
+    $.ajax({
+      url:urlApi,
+      type:'get',
+      dataType:'jsonp',
+      data:{
+        //从第几条开始请求；
+        "start" : 0,
+        //请求多少条数据
+        "count" : 10
+      },
+      success:function(data){
+        //total总条数属性，计算总页数；
+        var total = parseInt(data.total/10);
+        console.log(total);    //25
+        result  = data.subjects;
+        var str='';
+        for(var i=0;i<result.length;i++){
+          var item = result[i];
+          str += '<li><img src="'+item.images.large
+            +'" alt=""><p>'+item.title+'</p></li>'
+        }
+        
+        //追加渲染到页面
+        $('.movieList').append(str)
+        //分页插件，
+        $(".tcdPageCode").createPage({
+          //pageCount：总页数
+          pageCount:total,
+          //current：当前页
+          current:1,
+          backFn:function(pageIndex){
+            //单击回调方法，pageIndex是当前页码
+            $(".movieList").empty();
+            var start = 10*pageIndex;
+            console.log(start);
+            console.log(total);
+            $.ajax({
+              url:urlApi,
+              type:'get',
+              dataType:'jsonp',
+              data:{
+                "start" : start,
+                "count" : 10,
+              },
+              success:function(data){
+                var result  = data.subjects;
+                var str='';
+                for(var i=0;i<result.length;i++){
+                  var item = result[i];
+                  str += '<li><img src="'+item.images.large
+                    +'" alt=""><p>'+item.title+'</p></li>'
+                }
+                console.log(str);
+                $('.movieList').append(str)
+              }
+            })
+          }
+        });
+      }
+    })
+  })
+
+</script>
+
+
+
+
+
+</body>
+</html>

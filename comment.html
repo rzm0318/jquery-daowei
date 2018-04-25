@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/comment.css">
+</head>
+<body>
+
+<div class="header">
+  <div><img src="http://www.daoway.cn/pcimages/logo@2x.png"></div>
+  <div class="address">
+    <img src="http://www.daoway.cn/pcimages/citypoint@2x.png">
+    <span>北京</span>
+    <span>切换城市</span>
+  </div>
+  <div class="headerNav">
+    <a href="">首页</a>
+    <a href="">到位APP</a>
+    <a href="fuwushang.html">服务商</a>
+    <a href="">商家入驻</a>
+    <a href="">风物APP</a>
+    <a href="">关于我们</a>
+  </div>
+  <a class="last-a">商家登录</a>
+</div>
+<section id="service-item">
+  <div class="htit">
+    <div class="htit-center">
+    </div>
+  </div>
+  <div class="navtit">
+    <ul class="items">
+      <li>服务项目</li>
+      <li>商家简介</li>
+      <li>用户评论</li>
+    </ul>
+  </div>
+  <div class="nav">
+    <div class="nav-center">
+      <div class="service-link fuwu">
+        <!--<h3 ><i>服务项目</i></h3>
+        <div class="link-item">
+          <img src="./images/service/5cf8680f-0264-4686-ba05-145700db6063_thumb.jpg">
+          <div class="link-desc">
+            <span>{{content.list.name}}</span>
+            <span>{{content.list.desc}}</span>
+            <span>
+              <i class="price">{{content.list.price}}<em>元/小时</em></i>
+              <i class="oldpic">原价<em>{{content.list.oldPrice}}</em></em></i>
+              <i class="sold">已售出{{content.list.soldCount}}</i>
+            </span>
+          </div>
+        </div>-->
+      </div>
+      <div class="service-link shop">
+        <!--<h3><i>商家简介</i></h3>
+        <div class="link-item">
+          <span class="shopName">
+            {{content.list.company}}
+            <img src="{{content.list.imgUrl}}"/>
+          </span>
+          <span class="desc">{{content.list.profile}}</span>
+        </div>-->
+      </div>
+      <div class="service-link users">
+        <h3><i>用户评论</i><em>（10300条评论）</em></h3>
+        <div class="conments">
+          <div class="conment"></div>
+          <div class="pages">
+            <a href="javascript:;" class="up nopage"><上一页</a>
+            <div class="showpage">
+              <a href="javascript:;" class="num">1</a>
+              <a href="javascript:;" class="num">2</a>
+              <a href="javascript:;" class="num">3</a>
+              <a href="javascript:;" class="num">4</a>
+              <a href="javascript:;" class="num">5</a>
+              <a href="javascript:;" class="num">6</a>
+              <a href="javascript:;" class="num">7</a>
+              <a href="javascript:;" class="num">8</a>
+              <a href="javascript:;" class="num">9</a>
+              ...
+            </div>
+            <a href="javascript:;" class="down">下一页></a>
+          </div>
+        </div>
+        <div class="uesrs_title"></div>
+      </div>
+    </div>
+    <div class="aside">
+      <div>
+        <img src="./images/daowayApp.png">
+      </div>
+      <div>
+        <img src="./images/daowayApp.png">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--模板-->
+<script id="temp1" type="text/html">
+  <div class="htit-right">
+    <b>{{name}}</b>
+    <i>营业时间：<span>{{seredate}}</span></i>
+    <i>最近可预约时间：<span>{{servedatalately}}</span></i>
+  </div>
+  <div class="htit-left">
+        <span>
+          <i>{{praise}}</i>好评率
+        </span>
+    <span>
+          <i>{{accept}}</i>接单率
+          <em>|</em>
+        </span>
+    <span>
+          <i>{{orderCount}}</i>成功接单
+          <em>|</em>
+        </span>
+  </div>
+</script>
+<script id="temp2" type="text/html">
+  <h3 ><i>服务项目</i></h3>
+  <div class="link-item">
+    <img src="{{imgUrl}}">
+    <div class="link-desc">
+      <span>{{name}}</span>
+      <span>{{servedes}}</span>
+      <span>
+              <i class="price">{{price}}<em>元/小时</em></i>
+              <i class="oldpic">原价<em>{{oldPrice}}</em></em></i>
+              <i class="sold">已售{{soldCount}}</i>
+            </span>
+    </div>
+  </div>
+</script>
+<script id="temp3" type="text/html">
+  <h3><i>商家简介</i></h3>
+  <div class="link-item">
+          <span class="shopName">
+            上海家谐网络科技有限公司
+            <img src="./images/renzheng.jpg"/>
+          </span>
+    <span class="desc">{{business}}</span>
+  </div>
+</script>
+<!--循环模板 {{each 数据}}
+                 $value.属性     其等同$key
+              {{/each}}-->
+<script id="temp4" type="text/html">
+  {{each data}}
+  <img src="{{$value.iconUrl}}" alt="">
+      <ul>
+        <li class="username">{{$value.nick}}</li>
+        <li class="star">
+          <span >
+            <img src="./images/red_star.png">
+            <img src="./images/red_star.png">
+            <img src="./images/red_star.png">
+            <img src="./images/red_star.png">
+            <img src="./images/red_star.png">
+          </span>
+          <span><em>2018-03-15</em></span>
+        </li>
+        <li class="say">{{$value.comment}}</li>
+        <li class="position">
+          <img src="./images/position.jpg">
+          <span>{{$value.city}}</span>
+          <span>{{$value.area}}</span>
+        </li>
+      </ul>
+  {{/each}}
+</script>
+
+<script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./template-web.js"></script>
+<script type="text/javascript">
+  $(function () {
+    //头部右边导航栏
+    $(".header .headerNav a").hover(function(){
+      var linum = $(this).index();
+      $(".header .headerNav a").eq(linum).css("color","#e94840").siblings().css("color","black")
+    })
+
+    //顶部标题动画效果
+    var $top = $('.header').height()
+    $(window).scroll(function () {
+      var $scrollTop = $(window).scrollTop()
+      if($scrollTop<$top){
+        $(".header").slideUp(500,function () {
+          setInterval(function () {
+            $(".header").show()
+          },500)
+        })
+      }
+    })
+      //发送请求
+    $.get('http://localhost:3000/detail',function (data) {
+      $('.htit-center').append(template('temp1',data))
+      console.log(data);
+    })
+    $.get('http://localhost:3000/detail',function (data) {
+      $('.fuwu').append(template('temp2',data))
+      console.log(data);
+    })
+    $.get('http://localhost:3000/detail',function (data) {
+      $('.shop').append(template('temp3',data))
+      console.log(data);
+    })
+    /*$.get('http://localhost:3000/comment?page='+page,function (data) {
+      $('.conment').append(template('temp4',data));
+      //('temp4',data)  上面模板写 {{each comment}}
+      //('temp4',{data})  上面模板写 {{each data.comment}}
+      console.log(data);
+    })*/
+
+    total(0)
+    function total(index) {
+      $.get('http://localhost:3000/comment',function (data) {
+        var start = index*10;
+        var end = (index+1)*10;
+     //   console.log(start,end);
+        comment = data.comment.slice(start,end);
+        $('.conment').html(template('temp4',{data:comment}));
+      })
+    }
+    var aaa=0;
+    $(".num").click(function () {
+     $(".conment").empty();
+      aaa=$(this).index();
+      total(aaa)
+      console.log(aaa);
+    })
+    $(".up").click(function () {
+      $(".conment").empty();
+      total(aaa--)
+      if(aaa<0){
+          aaa=0
+        return
+      }
+      console.log(aaa);
+    })
+    $(".down").click(function () {
+      $(".conment").empty();
+      total(aaa++)
+      if(aaa>8){
+        aaa=8
+        return
+      }
+      console.log(aaa);
+    })
+  })
+</script>
+</body>
+</html>

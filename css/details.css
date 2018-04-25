@@ -1,0 +1,391 @@
+.wrap {
+  margin-top: 65px;
+  background: #ffffff;
+}
+.wrap .header {
+  background: white;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 200;
+  border-bottom: 1.5px solid rgba(191, 191, 191, 0.8);
+  display: flex;
+  width: 100%;
+  height: 73px;
+  line-height: 73px;
+}
+.wrap .header img {
+  padding-top: 13px;
+  margin-left: 40px;
+}
+.wrap .header .address {
+  position: absolute;
+  left: 360px;
+}
+.wrap .header .address img {
+  vertical-align: middle;
+  margin-top: -17px;
+}
+.wrap .header .address span {
+  font-weight: bold;
+}
+.wrap .header .headerNav {
+  position: absolute;
+  right: 130px;
+}
+
+.wrap .header .headerNav a {
+  font-weight: bold;
+  padding: 10px;
+}
+.wrap .header .headerNav .fuwu {
+  color: #e94840;
+}
+.wrap .header .last-a {
+  background: #e94840;
+  width: 76px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  right: 18px;
+  top: 25px;
+  font-weight: bold;
+}
+.wrap .service-center {
+  width: 100%;
+  height: 85px;
+  background: #FBF8F8;
+}
+.wrap .service-center .service-name {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  line-height: 85px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.wrap .service-content {
+  width: 100%;
+  margin-bottom: 60px;
+  background: #FBF8F8;
+}
+.wrap .service-content .content-detail {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+.wrap .service-content .content-detail .service-left {
+  flex: 4;
+  margin-right: 10px;
+}
+.wrap .service-content .content-detail .service-left .family {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  border: 1px solid #e5e5e5
+}
+.wrap .service-content .content-detail .service-left .family .family-inner {
+  width: 100%;
+  height: 100%;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left {
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img {
+  width: 75%;
+  height: 100%;
+  display: flex;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img img {
+  width: 150px;
+  height: 150px;
+  margin: 25px;
+  display: block;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img .family-detail {
+  height: 100%;
+  margin-top: 25px;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img .family-detail .firstItem {
+  height: 42px;
+  line-height: 42px;
+  font-size: 20px;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img .family-detail .secondItem {
+  color: #929292;
+  height: 42px;
+  font-size: 14px;
+  line-height: 42px;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img .family-detail .family-price {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img .family-detail .family-price .price-number {
+  color: #fc545e;
+  font-size: 30px;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img .family-detail .family-price .price-time {
+  color: #fc545e;
+  font-size: 14px;
+  font-weight: 700;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img .family-detail .family-price .origin-price {
+  font-size: 14px;
+  color: #898989;
+  margin-left: 20px;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-img .family-detail .family-price .origin-price .origin-price-number {
+  text-decoration: line-through;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-sale {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-sale .saoyisao {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-sale .yuyue {
+  color: #fb474f;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.wrap .service-content .content-detail .service-left .family .family-inner .inner-left .inner-sale img {
+  width: 130px;
+  height: 130px;
+}
+.wrap .service-content .content-detail .service-left .shopInfo {
+  margin-top: 10px;
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid #e5e5e5
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItem {
+  padding-top: 25px;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItem .titleText {
+  background: #fff;
+  width: 100%;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItem .titleText .service-title {
+  width: 95%;
+  height: 28px;
+  margin: 0 auto;
+  line-height: 28px;
+  color: #121212;
+  box-sizing: border-box;
+  background: #fff;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItem .titleText .title-container {
+  width: 74px;
+  height: 41px;
+  padding: 5px;
+  border-bottom: 3px solid #fb474f;
+  font-weight: 700;
+  font-size: 15px;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItem .titleText .commentCount {
+  color: #121212;
+  font-size: 14px;
+  margin-left: 15px;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItem .profile {
+  margin: 10px 25px 0px;
+  font-size: 14px;
+  height: 420px;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItem .profile pre {
+  line-height: 24px;
+  margin: 15px 0 0;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItemNext {
+  width: 100%;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItemNext .infoItemTitle {
+  width: 90%;
+  margin: 10px 10px 0px 25px;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItemNext .infoItemTitle p {
+  width: 100%;
+  line-height: 24px;
+  font-size: 14px;
+  height: 24px;
+  padding: 10px 0;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItemNext .infoItemTitle p >span:nth-child(2) {
+  margin-left: 15px;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItemNext .infoItemTitle p >span:nth-child(3) {
+  color: #f00;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItemNext .infoItemTitle >span {
+  display: block;
+  padding: 3px;
+  width: 66px;
+  height: 20px;
+  border-bottom: 3px solid #fb474f;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItemNext .infoItemTitle pre {
+  line-height: 24px;
+  font-size: 14px;
+  height: 120px;
+  padding: 9px;
+}
+.wrap .service-content .content-detail .service-left .shopInfo .infoItemNext .first pre {
+  background: #fffcf1;
+}
+.wrap .service-content .content-detail .service-right {
+  border: 1px solid #e5e5e5;
+  display: flex;
+  flex: 1;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a {
+  display: block;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver-container {
+  width: 100%;
+  height: 100%;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver-container .advertisement-title {
+  font-size: 20px;
+  padding-left: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  height: 60px;
+  line-height: 60px;
+  text-align: left;
+  background: #fff;
+  color: #121212;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver1 {
+  margin-bottom: 10px;
+  height: 356px;
+  background: #fff;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver1 >img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 40px;
+  margin-bottom: 10px;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver1 .centerText {
+  color: #121212;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver1 p {
+  width: 228px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver1 p >span:nth-child(2) {
+  color: #f00;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver2 {
+  width: 230px;
+  height: 300px;
+  background-image: url("http://www.daoway.cn/pcimages/tuijianfuwushang_06.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 230px 300px;
+  overflow: hidden;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver2 >img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin: 50px 0 0 50px;
+}
+.wrap .service-content .content-detail .service-right .server-advertisement a .adver-container::hover {
+  box-shadow: 5px 5px 15px #ccc;
+}
+.wrap .service {
+  text-align: center;
+  padding-top: 60px;
+  height: 200px;
+}
+.wrap .service h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 14px;
+  color: #3d3838;
+}
+.wrap .service h2 span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fb474f;
+}
+.wrap .service p {
+  font-size: 23px;
+  margin-bottom: 20px;
+  color: #3d3838;
+}
+.wrap .service .foot span {
+  margin-right: 26px;
+  font-size: 18px;
+}
+.wrap .service .foot span img {
+  vertical-align: middle;
+  margin: 5px;
+}
+.wrap .cities {
+  height: 120px;
+  position: relative;
+}
+.wrap .cities p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 35px;
+  float: left;
+}
+.wrap  .cities .city {
+  width: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  right: 90px;
+}
+.wrap  .cities .city a {
+  text-align: center;
+  width: 90px;
+  height: 30px;
+  font-size: 16px;
+  color: #898989;
+}
+.wrap  .footer {
+  background: #FBF8F8;
+}
+.wrap  .footer p {
+  color: #898989;
+  font-size: 14px;
+  margin-bottom: 38px;
+}

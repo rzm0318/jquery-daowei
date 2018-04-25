@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="css/serve.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="header">
+    <div><img src="http://www.daoway.cn/pcimages/logo@2x.png"></div>
+    <div class="address">
+      <img src="http://www.daoway.cn/pcimages/citypoint@2x.png">
+      <span>北京</span>
+      <span>切换城市</span>
+    </div>
+    <div class="headerNav">
+      <a href="index.html">首页</a>
+      <a href="">到位APP</a>
+      <a href="./fuwushang.html" class="fuwu">服务商</a>
+      <a href="">商家入驻</a>
+      <a href="">风物APP</a>
+      <a href="">关于我们</a>
+    </div>
+    <a class="last-a">商家登录</a>
+  </div>
+  <div class="provider">
+    <b class="provider_title">服务商</b>
+    <div class="provider_list">
+      <div class="providers_left">
+        <ul class="providers providers1"></ul>
+        <ul class="providers providers2"></ul>
+        <ul class="providers providers3"></ul>
+        <ul class="providers providers4"></ul>
+        <ul class="providers providers5"></ul>
+        <ul class="providers providers6"></ul>
+        <ul class="providers providers7"></ul>
+        <ul class="providers providers8"></ul>
+        <ul class="providers providers9"></ul>
+        <ul class="providers providers10"></ul>
+        <div class="provider_more">
+          <span class="more_text">
+            查看更多商家
+            <img src="./images/down.jpg">
+          </span>
+        </div>
+      </div>
+      <ul class="ad">
+        <li class="tuijian">
+          <a href="#">
+            <img src="./images/shangjiaruzhu.jpg">
+          </a>
+        </li>
+        <li class="app">
+          <a href="#">
+            <img src="./images/daowayApp.png">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+  <div class="service">
+    <h2>到位<span>服务</span>保障</h2>
+    <p>到位平台担保交易安全，交易未成功100%退款</p>
+    <div class="foot">
+        <span>
+          <img src="./images/anquan.jpg" alt="">优选服务
+        </span>
+      <span>
+          <img src="./images/anquan.jpg" alt="">全程保障
+        </span>
+      <span>
+          <img src="./images/anquan.jpg" alt="">安全无忧
+        </span>
+    </div>
+  </div>
+  <div class="cities">
+    <p>热门城市</p>
+    <div class="city">
+      <a href="javascript:;">北京</a>
+      <a href="javascript:;">上海</a>
+      <a href="javascript:;">广州</a>
+      <a href="javascript:;">深圳</a>
+      <a href="javascript:;">成都</a>
+      <a href="javascript:;">天津</a>
+      <a href="javascript:;">南京</a>
+      <a href="javascript:;">杭州</a>
+      <a href="javascript:;">重庆</a>
+      <a href="javascript:;">苏州</a>
+      <a href="javascript:;">武汉</a>
+      <a href="javascript:;">长沙</a>
+      <a href="javascript:;">济南</a>
+      <a href="javascript:;">郑州</a>
+      <a href="javascript:;">西安</a>
+      <a href="javascript:;">沈阳</a>
+      <a href="javascript:;">福州</a>
+      <a href="javascript:;">厦门</a>
+      <a href="javascript:;">南昌</a>
+      <a href="javascript:;">合肥</a>
+      <a href="javascript:;">宁波</a>
+      <a href="javascript:;">无锡</a>
+      <a href="javascript:;">青岛</a>
+      <a href="javascript:;">大连</a>
+      <a href="javascript:;">东莞</a>
+      <a href="javascript:;">佛山</a>
+      <a href="javascript:;">石家庄</a>
+      <a href="javascript:;">哈尔滨</a>
+      <a href="javascript:;">太原</a>
+      <a href="javascript:;">昆明</a>
+      <a href="javascript:;">贵阳</a>
+      <a href="javascript:;">南宁</a>
+      <a href="javascript:;">温州</a>
+
+    </div>
+  </div>
+</div>
+
+<script id="temp-fuwushang" type="text/html">
+  <li class="provider_item">
+    <a href="./comment.html">
+      <img class="provider_img" src="{{servicepro[1].imgUrl}}">
+      <div>
+        <p class="provider_content">
+          <img class="home1" src="{{servicepro[1].iconUrl}}">
+          {{servicepro[1].name}}
+        </p>
+      </div>
+      <div class="provider_rating">
+        <span>已接单{{servicepro[1].order}}单</span>
+        <span class="good">好评{{servicepro[1].estimate}}</span>
+      </div>
+    </a>
+  </li>
+
+</script>
+
+<script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./template-web.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".header .headerNav a").hover(function(){
+      //获取滑动的目标元素的index，之后给目标元素添加样式，其余兄弟元素均为原有样式； siblings() 不分前后
+      //$.prevAll()，返回所有之前的兄弟节点;   $.siblings(),返回兄弟姐妹节点，不分前后
+      var linum = $(this).index();
+      $(".header .headerNav a").eq(linum).css("color","#e94840").siblings().css("color","black")
+    })
+
+    $.get('http://localhost:3000/servicepro',function (data) {
+      $('.providers1').append(template('temp-fuwushang',data))
+      $('.providers2').append(template('temp-fuwushang',data))
+      $('.providers3').append(template('temp-fuwushang',data))
+      $('.providers4').append(template('temp-fuwushang',data))
+      $('.providers5').append(template('temp-fuwushang',data))
+      $('.providers6').append(template('temp-fuwushang',data))
+      $('.providers7').append(template('temp-fuwushang',data))
+      $('.providers8').append(template('temp-fuwushang',data))
+      $('.providers9').append(template('temp-fuwushang',data))
+      $('.providers10').append(template('temp-fuwushang',data))
+      console.log(data.servicepro[1].name);
+    })
+
+    //顶部标题动画效果
+    var $top = $('.header').height()
+    $(window).scroll(function () {
+      var $scrollTop = $(window).scrollTop()
+      if($scrollTop<$top){
+        $(".header").slideUp(1100000,function () {
+          setInterval(function () {
+            $(".header").show()
+          },800)
+        })
+      }
+    })
+  })
+</script>
+
+</body>
+</html>
